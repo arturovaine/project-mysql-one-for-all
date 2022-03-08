@@ -81,8 +81,8 @@ Normalize uma tabela na terceira forma normal e acesse as informações desta ta
 
 ## Data de Entrega
 
-  - Serão `X` dias de projeto.
-  - Data de entrega para avaliação final do projeto: `DD/MM/YYYY - 14:00h`.
+  - Serão `2` dias de projeto.
+  - Data de entrega para avaliação final do projeto: `16/03/2022 14:00`.
 
 ---
 
@@ -91,9 +91,9 @@ Normalize uma tabela na terceira forma normal e acesse as informações desta ta
 ### Antes de começar a desenvolver
 
 1. Clone o repositório
-  * `git clone https://github.com/tryber/sd-0x-mysql-one-for-all.git`.
+  * `git clone https://github.com/tryber/sd-016-a-mysql-one-for-all.git`.
   * Entre na pasta do repositório que você acabou de clonar:
-    * `cd sd-0x-mysql-one-for-all`
+    * `cd sd-016-a-mysql-one-for-all`
 
 2. Instale as dependências
   * `npm install`
