@@ -243,7 +243,7 @@ Algumas coisas devem seguir um padrão pré-estabelecido para que os testes de c
 **Dica**: variáveis de ambiente definidas na mesma linha do comando valem apenas para aquele comando. Se preferir, você pode exportar as variáveis de ambiente para toda a _sessão_ (todos os comandos até você fechar aquele terminal). Por exemplo:
 
 ```sh
-export MYSQL_USER=root MYSQL_PASSWORD=password HOSTNAME=localhost PORT=1337
+export MYSQL_USER=root MYSQL_PASSWORD=password HOSTNAME=localhost PORT=3306
 ```
 
 E depois disso você só precisa rodar `npm test` quando for testar os projetos.
@@ -253,7 +253,7 @@ E depois disso você só precisa rodar `npm test` quando for testar os projetos.
 ⚠️ **Dica**: Caso queira utilizar _Docker_ para rodar os testes localmente, basta executar o comando: ⚠️
 
 ```sh
-docker run --name meu-mysql-5_7 -e MYSQL_ROOT_PASSWORD=1234 -d -p 3306:3306 mysql:5.7
+docker run -p 3306:3306 --name mysql_80 -e MYSQL_ROOT_PASSWORD=sua_senha -d mysql:5.7 mysqld --default-authentication-plugin=mysql_native_password
 ```
 
 <details close>
