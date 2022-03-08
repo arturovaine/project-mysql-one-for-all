@@ -232,7 +232,7 @@ Algumas coisas devem seguir um padrão pré-estabelecido para que os testes de c
 
   * Ou seja, suponha que para poder acessar a base de dados feita neste projeto você tenha `root` como seu nome de pessoa usuária, `password` como senha, `localhost` como host e `1337` como porta. Logo, você executaria:
     ```sh
-    MYSQL_USER=root MYSQL_PASSWORD=password HOSTNAME=localhost PORT=1337 npm test
+    MYSQL_USER=root MYSQL_PASSWORD=password HOSTNAME=localhost PORT=3306 npm test
     ```
 
   * Usando o exemplo anterior de base, suponha que você não tenha setado uma senha para `root` e esteja usando a porta padrão (3306). Neste caso, você executaria:
