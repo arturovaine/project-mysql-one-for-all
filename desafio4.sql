@@ -6,4 +6,5 @@ CASE
 END AS condicao_usuario
 FROM SpotifyClone.usuarios
 LEFT JOIN SpotifyClone.reproducoes ON SpotifyClone.usuarios.usuario_id = SpotifyClone.reproducoes.usuario_id
+GROUP BY usuario
 ORDER BY usuario;
