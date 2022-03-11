@@ -5,7 +5,9 @@ CREATE DATABASE SpotifyClone;
 CREATE TABLE SpotifyClone.usuarios(
     usuario_id INT PRIMARY KEY,
     usuario VARCHAR(100),
-    idade INT
+    idade INT,
+    data_assinatura DATE,
+    plano_id INT
 ) engine = InnoDB;
 
 INSERT INTO SpotifyClone.usuarios (usuario_id, usuario, idade, data_assinatura, plano_id)
@@ -121,13 +123,14 @@ VALUES
   (40, 'Young And Father', 197, 6);
 
 CREATE TABLE SpotifyClone.seguidores(
-    seguidor_id INT PRIMARY KEY,
+    seguidor_id INT,
     usuario_id INT,
     seguindo_artista_id INT,
-    FOREIGN KEY (usuario_id) REFERENCES usuarios(usuario_id)
+    PRIMARY KEY (seguidor_id),
+    FOREIGN KEY seguidores(usuario_id) REFERENCES usuarios(usuario_id)
 ) engine = InnoDB;
 
-INSERT INTO SpotifyClone.albums (seguidor_id, usuario_id, seguindo_artista_id)
+INSERT INTO SpotifyClone.seguidores (seguidor_id, usuario_id, seguindo_artista_id)
 VALUES
   (1, 1, 2),
   (2, 1, 3),
@@ -158,7 +161,7 @@ CREATE TABLE SpotifyClone.reproducoes(
     historico_reproducoes_horario TIME,
     cancao_id INT,
     usuario_id INT,
-    FOREIGN KEY (cancao_id) REFERENCES cancoes(usuario_id),
+    FOREIGN KEY (cancao_id) REFERENCES cancoes(cancao_id),
     FOREIGN KEY (usuario_id) REFERENCES usuarios(usuario_id)
 ) engine = InnoDB;
 
